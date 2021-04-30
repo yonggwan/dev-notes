@@ -1,9 +1,9 @@
-# S3 + Cloudfront + Route53에 연결하기 (with custom domain)
+# 싱글페이지 어플리케이션 S3에 배포과정 간단요약 (S3, Cloudfront, Route53)
 
 ## aws certificate manager (HTTPS를 위한 SSL 인증서 생성)
-- 리전선택 (!!!버지니아 북부로 설정해야 cloudfront 배포에 연결이 가능!!!)
+- 리전(버지니아 북부) 선택 (버지니아 북부로 리전을 설정해야 cloudfront 배포에 연결이 가능하다.)
 - 인증서 프로비저닝 시작하여 인증서생성
-- 아래 Route53, 도메인구입 의 절차를 마치면 aws가 주기적으로 도메인을 체크하여 인증상태를 발급완료 로 업데이트 함. (대략 30분 소요됨)
+- 아래 Route53, 도메인구입의 절차를 마치면 AWS가 주기적으로 도메인을 체크하여 인증상태를 발급완료 로 업데이트 함. (대략 30분 소요됨)
 
 ## aws cloudfront 배포생성
 - Origin Domain Name을 생성한 AWS S3버킷으로 설정
@@ -22,6 +22,6 @@
 - 구입한 도메인 네임서버 설정에, route53에서 생성한 호스팅영역의 NS유형 레코드 값들을 모두 추가
 
 ## s3 버킷 생성
-- 리전선택(seoul)
+- 서비스할 리전 선택(Asia/seoul)
 - 퍼블릭액세스 모두 차단
 - 버킷에 view html소스를 업로드
