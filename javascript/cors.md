@@ -9,3 +9,5 @@ AJAX 통신시 백엔드 서버에서 500오류가 발생했을경우에
 그 이유는 Preflight 요청에서는 백엔드에서 실제 작업을 거치지 않기 때문에 OPTION Method 로써는 cors설정이 기대처럼 동작하지만
 실제 요청한 Method(POST, PUT..)에서는 백엔드 어플리케이션의 로직을 거치게 된다. 이 과정에서 서버에 오류가발생할경우
 적절한 Response Header `Access-Control-Allow-Origin`를 응답하지 못하게 되어 cors 오류가 발생하게 된다.
+
+이는 웹서버(Nginx, ..) cors 설정을 통해 해결 가능할것이다.
