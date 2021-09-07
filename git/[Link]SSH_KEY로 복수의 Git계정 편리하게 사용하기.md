@@ -3,5 +3,5 @@
 설정 후 Repository cloning
 ```bash
 cat ~/.ssh/config # HOST 참고
-git clone git@{HOST}:USERNAME/test-ssh.git # clone
+git clone git@{HOST_NAME}:{REPOSITORY_USER_NAME}/{REPOSITORY_NAME}.git # clone
 ```
