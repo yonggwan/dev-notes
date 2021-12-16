@@ -1,2 +1,1 @@
-# TIL
-TIL (Today I Learned)
+# Dev notes
